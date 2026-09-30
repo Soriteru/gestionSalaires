@@ -21,9 +21,9 @@ public abstract class Employe {
         this.anciennete = anciennete;
     }
     
-    public abstract int getSalaire();
+    public abstract double getSalaire();
     
     public String getDescription(){
-        return nom+" "+prenom+" est "+poste+" depuis "+anciennete+" ans et gagne "+getSalaire()+" €.";
+        return nom+" "+prenom+" est "+poste+" depuis "+anciennete+" ans et gagne "+String.format("%.2f",getSalaire())+" €.";
     }
 }

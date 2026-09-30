@@ -15,7 +15,7 @@ public class Administratif extends Employe {
     }
     
     @Override
-    public int getSalaire(){
+    public double getSalaire(){
         return (1900);
     }
 }
