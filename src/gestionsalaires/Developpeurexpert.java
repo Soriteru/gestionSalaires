@@ -17,9 +17,8 @@ public class Developpeurexpert extends Developpeur {
     
     @Override
     public double getSalaire(){
-        double salaire = super.getSalaire();
-        salaire = salaire * 1.1;
+        double salaire = super.getSalaire() * 1.1;
         
-        return salaire;
+        return Math.round(salaire * 10) / 10.0;
     }
 }

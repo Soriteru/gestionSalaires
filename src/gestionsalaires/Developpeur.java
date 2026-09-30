@@ -28,11 +28,11 @@ public class Developpeur extends Employe {
         } else if("php".equalsIgnoreCase(langages)){
             prime = 45;
         }
-        return ((1900+anciennete*100+prime));
+        return (1900+anciennete*100+prime);
         }
     
     @Override
     public String getDescription(){
-        return nom+" "+prenom+" est "+poste+" depuis "+anciennete+" ans et gagne "+getSalaire()+" €. Il reçoit une prime grace au langage " +langages+ ".";
-    }
-    }
+    return nom+" "+prenom+" est "+poste+" depuis "+anciennete+" ans et gagne "+getSalaire()+" €. Perçoit une prime grâce au langage " +langages+ ".";
+}
+}
