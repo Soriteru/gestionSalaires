@@ -10,12 +10,24 @@ package gestionsalaires;
  */
 public class Developpeur extends Employe {
     
-    public Developpeur(String nom, String prenom, int anciennete){
+    protected String langages;
+    
+    public Developpeur(String nom, String prenom, int anciennete, String langages){
         super(nom, prenom, anciennete, "Développeur");
+        this.langages = langages;
     }
     
     @Override
     public int getSalaire(){
-        return (1900+anciennete*100);
+        int prime = 0;
+        
+        if("java".equalsIgnoreCase(langages)){
+            prime = 50;
+        } else if("python".equalsIgnoreCase(langages)){
+            prime = 70;
+        } else if("php".equalsIgnoreCase(langages)){
+            prime = 45;
+        }
+        return (1900+anciennete*100+prime);
     }
 }
